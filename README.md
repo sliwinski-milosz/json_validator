@@ -16,6 +16,17 @@ Uses [jsonschema](https://pypi.python.org/pypi/jsonschema) for validating data.
     	In case of validation errors returns 'message'
     	In case that validation passes it just calls wrapped function
 
+## INSTALLATION
+Decorator can be installed using pip directly from github repository by using following command:
+```
+pip install git+https://github.com/sliwinski-milosz/json_validator.git@master
+```
+
+You can add it to requirements.txt file as well by adding following line:
+```
+git+https://github.com/sliwinski-milosz/json_validator.git@master
+```
+
 ## EXAMPLES
 
 Example 1:
