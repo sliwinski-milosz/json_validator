@@ -9,7 +9,7 @@ import inspect
 import os
 
 __author__ = "sliwinski.milosz@gmail.com"
-__version__ = "0.1"
+__version__ = "0.2"
 
 
 def validate_params(message="Wrong params!",
@@ -76,18 +76,21 @@ def validate_params(message="Wrong params!",
                        in args or kwargs
         '''
 
-        params = None
-
-        if kwargs and kwargs.get(params_variable):
+        if kwargs and params_variable in kwargs:
             params = kwargs.get(params_variable)
+            return params
         else:
             argspec_args = inspect.getargspec(function).args
-            if argspec_args and params_variable in argspec_args:
+            if argspec_args  and params_variable in argspec_args:
+#                 print argspec_args
+#                 print params_variable
+#                 print args
                 params = args[argspec_args.index(params_variable)]
+                return params
 
-        if not params: raise Exception( ("Parameters can't be found inside {} argument. \n"
-                                         "Please check if you provided correct argument name for params_variable.").format(params_variable))
-        return params
+        raise Exception( ("Parameters can't be found inside {} argument. \n"
+                          "Please check if you provided correct argument name for params_variable.").format(params_variable))
+        
 
     if callable(message):
         # No arguments, this is the decorator

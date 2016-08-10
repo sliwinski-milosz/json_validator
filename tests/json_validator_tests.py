@@ -60,6 +60,13 @@ class JsonValidatorTest(unittest.TestCase):
          
         self.assertEqual(test_function_default_params_arg(arg1,arg2,correct_params),"Returned by function")
         self.assertEqual(test_function_default_params_arg(arg1,arg2,wrong_params),{'status': 'Wrong params!'})
+        
+    def test_none_params(self):
+        @validate_params
+        def test_function_default_params_arg(arg1,arg2,params):
+            return "Returned by function"
+         
+        self.assertEqual(test_function_default_params_arg(arg1,None,arg2,params=None),{'status': 'Wrong params!'})
 
 def save_schema_to_json():
     '''
