@@ -1,7 +1,8 @@
 # json_validator
------------
+-----------------
 
-Decorator for validation of parameters sent to Flask and loaded by request.get_json()
+Decorator for validating json parameters passed to function.
+Can be used for validation of parameters sent to Flask and loaded by request.get_json().
 
 Uses [jsonschema](https://pypi.python.org/pypi/jsonschema) for validating data.
 
@@ -19,15 +20,26 @@ Uses [jsonschema](https://pypi.python.org/pypi/jsonschema) for validating data.
 ## Instalation
 Decorator can be installed using pip directly from github repository by using following command:
 ```
-pip install git+https://github.com/sliwinski-milosz/json_validator.git@master
+pip install git+https://github.com/sliwinski-milosz/json_validator.git@{branch or tag or commit}
 ```
 
 You can add it to requirements.txt file as well by adding following line:
 ```
-git+https://github.com/sliwinski-milosz/json_validator.git@master
+git+https://github.com/sliwinski-milosz/json_validator.git@{branch or tag or commit}
 ```
 
-## Examples
+## Decorator defaults
+
+Default decorator parameters
+
+```python
+@validate_params(message="Wrong params!",
+                 params_variable="params",
+                 schema_filename="schema.json",
+                 debug=False)
+```
+
+## Usage Examples
 
 Example 1:
 
@@ -42,6 +54,7 @@ def some_function(params):
 
 
 Example 2:
+
 ```python
 from json_validator import validate_params
 
@@ -53,6 +66,8 @@ def some_function(params_dict):
     result = some_another_function(params_dict)
     return result
 ```
+
+You can find examples of usage as well in `./examples` directory.
 
 ## Tests
 1. To test json_validator with default system python:

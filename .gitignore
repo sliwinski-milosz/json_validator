@@ -1,5 +1,8 @@
 *.py[cod]
 *.egg-info/
+build/
+lib/
+dist/
 .coverage
 .tox/
 .cache/

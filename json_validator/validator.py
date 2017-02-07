@@ -17,13 +17,14 @@ def validate_params(message="Wrong params!",
                     schema_filename="schema.json",
                     debug=False):
     """
-    Decorator for validation of parameters sent to Flask and loaded by request.get_json()
+    Decorator for validating json parameters passed to function.
+    Can be used for validation of parameters sent to Flask and loaded by request.get_json().
 
     Args:
         message: message returned in case of validation errors
         params_variable: name of the argument which contains json parameters
         schema_filename: name of json file or path to the json file in which
-        json schema is stored
+                         json schema is stored
         debug: if set to True, will raise detailed exception in case of validation errors
 
     Returns:
