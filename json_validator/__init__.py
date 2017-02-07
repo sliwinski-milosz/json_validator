@@ -1,1 +1,1 @@
-from validator import validate_params
+from .validator import validate_params
