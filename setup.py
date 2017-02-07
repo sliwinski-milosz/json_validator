@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 
 setup(
     name='json_validator',
-    version='0.3',
+    version='1.0',
     description='''Provide decorator for validating json parameters passed to function. '''
                 '''Can be used for validation of json parameters sent to Flask.''',
     long_description=readme,
