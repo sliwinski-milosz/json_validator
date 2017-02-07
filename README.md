@@ -16,7 +16,7 @@ Uses [jsonschema](https://pypi.python.org/pypi/jsonschema) for validating data.
     	In case of validation errors returns 'message'
     	In case that validation passes it just calls wrapped function
 
-## INSTALLATION
+## Instalation
 Decorator can be installed using pip directly from github repository by using following command:
 ```
 pip install git+https://github.com/sliwinski-milosz/json_validator.git@master
@@ -27,7 +27,7 @@ You can add it to requirements.txt file as well by adding following line:
 git+https://github.com/sliwinski-milosz/json_validator.git@master
 ```
 
-## EXAMPLES
+## Examples
 
 Example 1:
 
@@ -54,7 +54,28 @@ def some_function(params_dict):
     return result
 ```
 
-## TESTS
-```
-python -m tests.json_validator_tests
-```
+## Tests
+1. To test json_validator with default system python:
+
+  ```
+  py.test
+  ```
+
+2. To test multiple python versions os iOS use [pyenv](http://www.holger-peters.de/using-pyenv-and-tox.html) and tox:
+
+  a) prepare environment:
+
+    ```
+    brew install pyenv
+    pyenv install -s 2.7.13
+    pyenv install -s 3.5.3
+    pyenv install -s 3.6.0
+    pyenv local 2.7.13 3.5.3 3.6.0
+    ```
+
+  b) run tests:
+
+    ```
+    tox
+    ```
+

@@ -2,6 +2,9 @@
 *.egg-info/
 .coverage
 .tox/
-
 .cache/
+.python-version
+
+
+# Editors
 .vscode/
