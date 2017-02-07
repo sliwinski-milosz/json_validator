@@ -17,9 +17,8 @@ setup(
     author_email='sliwinski.milosz@gmail.com',
     url='https://github.com/sliwinski-milosz/json_validator',
     license=mylicense,
-    packages = ['json_validator'],
+    packages=['json_validator'],
     install_requires=[
-        'functools32==3.2.3.post2',
         'jsonschema==2.5.1'
     ],
 )

@@ -1,2 +1,15 @@
-functools32==3.2.3.post2
+# main
+appdirs==1.4.0
 jsonschema==2.5.1
+packaging==16.8
+pyparsing==2.1.10
+six==1.10.0
+
+# test
+coverage==4.3.4
+pluggy==0.4.0
+py==1.4.32
+pytest==3.0.6
+pytest-cov==2.4.0
+tox==2.6.0
+virtualenv==15.1.0
