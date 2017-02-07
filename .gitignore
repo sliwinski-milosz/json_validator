@@ -1,1 +1,7 @@
 *.py[cod]
+*.egg-info/
+.coverage
+.tox/
+
+.cache/
+.vscode/
