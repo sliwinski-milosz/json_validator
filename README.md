@@ -7,14 +7,9 @@ Can be used for validation of parameters sent to Flask and loaded by `request.ge
 Uses [jsonschema](https://pypi.python.org/pypi/jsonschema) for validating data.
 
 ## Instalation
-Decorator can be installed using pip directly from github repository by using following command:
-```
-pip install git+https://github.com/sliwinski-milosz/json_validator.git@{branch or tag or commit}
-```
 
-You can add it to requirements.txt file as well by adding following line:
 ```
-git+https://github.com/sliwinski-milosz/json_validator.git@{branch or tag or commit}
+pip install json_validator
 ```
 
 ## Parameters
@@ -73,6 +68,7 @@ def some_function(params_dict):
 ```
 
 ## Tests
+
 1. To test json_validator with default system python:
 
   ```
