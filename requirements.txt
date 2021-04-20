@@ -8,7 +8,7 @@ six==1.10.0
 # test
 coverage==4.3.4
 pluggy==0.4.0
-py==1.4.32
+py==1.10.0
 pytest==3.0.6
 pytest-cov==2.4.0
 tox==2.6.0
